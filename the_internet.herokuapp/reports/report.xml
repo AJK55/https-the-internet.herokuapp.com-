@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite name="TestCafe Tests: Chrome 78.0.3904 / Windows 10.0.0" tests="22" failures="2" skipped="1" errors="2" time="149.735" timestamp="Thu, 28 Nov 2019 18:31:26 GMT" >
+  <testcase classname="Testing the A/B Testing Page" name="Hover Locators" time="3">
+  </testcase>
+  <testcase classname="Testing the A/B Testing Page" name="Validate Page Content" time="2.208">
+  </testcase>
+  <testcase classname="Testing the Add/Remove Elements Page" name="Validate Locators - Not Buttons" time="2.396">
+  </testcase>
+  <testcase classname="Testing the Add/Remove Elements Page" name="Add 1 Element and Delete" time="2.573">
+  </testcase>
+  <testcase classname="Testing the Add/Remove Elements Page" name="Add Random # Elements and Randomly Delete" time="29.543">
+  </testcase>
+  <testcase classname="Testing the Basic Auth Page" name="Authenticate to Basic Auth" time="0.003">
+    <skipped/>
+  </testcase>
+  <testcase classname="Testing the Broken Images Page" name="Validate Broken Images Page Locators" time="2.918">
+  </testcase>
+  <testcase classname="Testing the Broken Images Page" name="Validate Status Code for Each Image -  Set to 404 Since Images are Broken by Default (screenshots: C:\Users\antho\Desktop\my-tests\the_internet.herokuapp\screenshots\8\Chrome_78.0.3904_Windows_10.0.0\errors\1.png)" time="6.054">
+    <failure>
+    <![CDATA[
+      1) AssertionError: expected 200 to deeply equal 404
+
+         Browser: Chrome 78.0.3904 / Windows 10.0.0
+         Screenshot:
+      C:\Users\antho\Desktop\my-tests\the_internet.herokuapp\screenshots\8\Chrome_78.0.3904_Windows_10.0.0\errors\1.png
+
+            44 |test('Validate Status Code for Each Image -  Set to 404 Since Images are Broken by
+      Default', async t => {
+            45 |  var i;
+            46 |  for (i = 0; i < page.brokenImagesUrl.length; i++) {
+            47 |    const status = await func.getRequestResult(page.brokenImagesUrl[i]);
+            48 |    console.log(page.brokenImagesUrl[i] + '= ' + status)
+          > 49 |    await t.expect(status).eql(404)
+            50 |  }
+            51 |
+            52 |
+            53 |})
+            54 |
+
+            at eql
+      (C:\Users\antho\Desktop\my-tests\the_internet.herokuapp\tests\brokenImagesTest.js:49:28)
+    ]]>
+    </failure>
+  </testcase>
+  <testcase classname="Testing the Challenging DOM Page" name="Validate Locators on Challenging DOM Page" time="2.426">
+  </testcase>
+  <testcase classname="Testing the Challenging DOM Page" name="Hover over Buttons" time="2.502">
+  </testcase>
+  <testcase classname="Testing the Challenging DOM Page" name="Hover over Column Headers" time="2.97">
+  </testcase>
+  <testcase classname="Testing the Challenging DOM Page" name="Hover over Row Data" time="13.403">
+  </testcase>
+  <testcase classname="Testing the Challenging DOM Page" name="Hover over Edit/Delete Links" time="5.429">
+  </testcase>
+  <testcase classname="Testing the Challenging DOM Page" name="Click Edit/Delete Links - Validate URL" time="6.084">
+  </testcase>
+  <testcase classname="Testing the Challenging DOM Page" name="Validate Answer Changes on Button Click" time="5.618">
+  </testcase>
+  <testcase classname="Testing the Checkboxes Page" name="Validate Locators on Checkboxes Page" time="2.472">
+  </testcase>
+  <testcase classname="Testing the Checkboxes Page" name="Validate Checkbox Label Text" time="1.877">
+  </testcase>
+  <testcase classname="Testing the Checkboxes Page" name="Check Checkboxes" time="2.425">
+  </testcase>
+  <testcase classname="Welcome to the-internet" name="Visit the-Internet" time="1.741">
+  </testcase>
+  <testcase classname="Welcome to the-internet" name="Hover Over Page Links" time="8.172">
+  </testcase>
+  <testcase classname="Welcome to the-internet" name="Validate HyperLink Text" time="3.563">
+  </testcase>
+  <testcase classname="Welcome to the-internet" name="Validatre HyperLink HREF (screenshots: C:\Users\antho\Desktop\my-tests\the_internet.herokuapp\screenshots\22\Chrome_78.0.3904_Windows_10.0.0\errors\1.png)" time="10.458">
+    <failure>
+    <![CDATA[
+      1) AssertionError: expected '/notification_message' to deeply equal
+      '/notification_message_rendered'
+
+         Browser: Chrome 78.0.3904 / Windows 10.0.0
+         Screenshot:
+      C:\Users\antho\Desktop\my-tests\the_internet.herokuapp\screenshots\22\Chrome_78.0.3904_Windows_10.0.0\errors\1.png
+
+            54 |  //await t
+            55 |  //  .expect(links.abTesting.getAttribute('href')).eql(links.abTestingHref)
+            56 |  var i;
+            57 |  for (i = 0; i < links.pageLinks.length; i++) {
+            58 |    await t
+          > 59 |      .expect(links.pageLinks[i].getAttribute('href')).eql(links.pageLinksHref[i])
+            60 |  }
+            61 |})
+            62 |
+            63 |test('Click Link, Validate URL, Click Back - Errors out on some pages', async t =>
+      {
+            64 |  //await t
+
+            at eql
+      (C:\Users\antho\Desktop\my-tests\the_internet.herokuapp\tests\theInternetTest.js:59:56)
+    ]]>
+    </failure>
+  </testcase>
+  <testcase classname="Welcome to the-internet" name="Click Link, Validate URL, Click Back - Errors out on some pages" time="31.497">
+  </testcase>
+</testsuite>
