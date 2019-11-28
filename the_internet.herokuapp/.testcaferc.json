@@ -1,0 +1,25 @@
+{
+  "skipJsErrors": true,
+  //  "takeScreenshotsOnFails": true,
+  //  "screenshotPath": "screenshots/",
+  //  "screenshotPathPattern": "test-${TEST_INDEX}-${USERAGENT}-${FILE_INDEX}.png",
+  "screenshots": {
+    "path": "screenshots/",
+    "takeOnFails": true,
+    "pathPattern": "${TEST_INDEX}/${USERAGENT}/${FILE_INDEX}.png"
+  },
+  "reporter": [
+    {
+      "name": "spec"
+    },
+    {
+      "name": "xunit",
+      "output": "reports/report.xml"
+  },
+    {
+      "name": "html",
+      "output": "reports/report.html"
+  }
+],
+
+}
