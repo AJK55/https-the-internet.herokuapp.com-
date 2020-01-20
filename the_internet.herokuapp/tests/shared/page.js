@@ -147,6 +147,29 @@ export default class Page {
       this.checkboxes = Selector('#checkboxes'),
     ]
 
+    this.contextMenuLocators = [
+      this.contextMenuP1 = Selector('#content > div > p:nth-child(2)'),
+      this.contextMenuP2 = Selector('#content > div > p:nth-child(3)'),
+      this.contextMenuBox = Selector('#hot-spot')
+    ]
+
+    this.contextMenuText = [
+      this.contextHeaderText = 'Context Menu',
+      this.contextMenuP1Text = 'Context menu items are custom additions that appear in the right-click menu.',
+      this.contextMenuP2Text = "Right-click in the box below to see one called 'the-internet'. When you click it, it will trigger a JavaScript alert.",
+      this.contxtMenuType = 'alert',
+      this.contextMenuAlertText = 'You selected a context menu',
+      this.contextMenuURL = 'https://the-internet.herokuapp.com/context_menu',
+    ]
+
+    this.basicAuthLocators = [
+      this.basicAuthP1 = Selector('#content > div > p')
+    ]
+
+    this.basicAuthText = [
+      this.basicAuthHeaderText = 'Basic Auth',
+      this.basicAuthP1Text = 'Congratulations! You must have the proper credentials.',
+    ]
 
   }
 }

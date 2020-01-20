@@ -10,7 +10,7 @@ const page = new Page();
 const func = new Functions();
 const links = new Links();
 
-fixture `Testing the Basic Auth Page`
+fixture `Testing the Digest Auth Page`
   .page `https://the-internet.herokuapp.com/`
   .httpAuth({
     username: 'admin',
@@ -22,12 +22,12 @@ fixture `Testing the Basic Auth Page`
     await t
       .maximizeWindow()
     await t
-      .click(links.basicAuth)
+      .click(links.digestAuth)
   });
 
 
 
-test('Authenticate to Basic Auth', async t => {
+test.skip('Authenticate to Digest Auth', async t => {
   await t
     .expect(page.header3.innerText).eql(page.basicAuthHeaderText)
     .expect(page.basicAuthP1.innerText).eql(page.basicAuthP1Text)
